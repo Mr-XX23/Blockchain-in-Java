@@ -16,7 +16,7 @@ public class DigitalFingerPrintGenerator {
             // Create a hash
             for (byte h : hash){
                 String hex = Integer.toHexString(0xff & h);
-                System.out.println(hex);
+                  // System.out.println(hex);
                 if( hex.length() == 1 ) generatedHash.append('0');
                 generatedHash.append(hex);
             }

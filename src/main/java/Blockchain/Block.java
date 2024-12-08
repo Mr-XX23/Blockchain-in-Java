@@ -3,8 +3,8 @@ package Blockchain;
 import java.util.Date;
 
 public class Block {
-    private String hash;
-    private String previousBlockHash;
+    public String hash;
+    public String previousBlockHash;
     private String information;
     private long timeStamp;
 
@@ -12,6 +12,11 @@ public class Block {
         this.information = data;
         this.previousBlockHash = previousBlockHash;
         this.timeStamp = new Date().getTime();
+        this.hash = calculateHash();
+    }
+
+    public String calculateHash(){
+        return DigitalFingerPrintGenerator.applySHA256(previousBlockHash + Long.toString(timeStamp) + information);
     }
 }
 
