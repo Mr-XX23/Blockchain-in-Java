@@ -2,17 +2,22 @@ package Blockchain.Core;
 
 import java.security.Security;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import Blockchain.CryptoBalami.Transaction;
+import Blockchain.CryptoBalami.TransactionOutput;
 import Blockchain.CryptoBalami.Wallet;
 import com.google.gson.GsonBuilder;
 
 public class BalamiChainMain {
 
     public static ArrayList<Block> blockchain = new ArrayList<>();
+    //list of all unspent transactions.
+    public static HashMap<String, TransactionOutput> UTXOs = new HashMap<String,TransactionOutput>();
     public static int difficulty = 5;
     public static Wallet walletA;
     public static Wallet walletB;
+    public static float minimumTransaction;
 
     public static void main(String[] args) {
 
