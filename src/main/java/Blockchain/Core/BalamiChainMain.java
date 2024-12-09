@@ -1,9 +1,10 @@
-package Blockchain;
+package Blockchain.Core;
 
 import java.util.ArrayList;
+
 import com.google.gson.GsonBuilder;
 
-public class BlockchainMain {
+public class BalamiChainMain {
 
     public static int difficulty = 5;
     public static ArrayList<Block> blockchain = new ArrayList<>();

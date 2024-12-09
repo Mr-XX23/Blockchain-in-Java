@@ -1,4 +1,4 @@
-package Blockchain;
+package Blockchain.Core;
 
 import java.util.Date;
 
